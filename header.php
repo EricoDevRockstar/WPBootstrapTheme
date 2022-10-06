@@ -23,13 +23,14 @@
   
 </head>
 
-<body class="blog">
+<body <?php body_class(); ?>>
 
   <div id="top-navigation">
     <div class="container">
       <div class="row justify-content-end">
         <div class="col-md-6">
-          <nav class="main-menu">
+         
+        <!-- <nav class="main-menu">
             <ul class="top-menu d-flex flex-row navigation top-menu justify-content-end list-unstyled">
               <li class="menu-item"><a href="index.html">Home</a></li>
 
@@ -56,7 +57,20 @@
               <li class="menu-item"><a href="index.html">Contact</a></li>
               <li class="menu-item special-menu"><a href="index.html">Join</a></li>
             </ul>
-          </nav>
+          </nav> -->
+
+          <?php
+          // Create a Dynamic Menu
+            wp_nav_menu(
+              array(
+                'theme_location' => 'primary', // As registed in function.php
+                'depth' => 3, // As set up in our CSS
+                'container' => 'nav', // HTML wrapper in the menu ul
+                'container_class' => 'main-menu', // Wrapper class
+                'menu_class' => 'top-menu d-flex flex-row mavigation top-menu justify-content-end list-unstyled'
+              )
+            );
+          ?>
 
           <button type="button" class="navbar-open">
             <i class="mobile-nav-toggler flaticon flaticon-menu"></i>

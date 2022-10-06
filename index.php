@@ -19,7 +19,7 @@ get_header();
     <div class="container">
       <div class="row flex-vertical-center">
         <div class="col-sm-6">
-          <p><strong>Want to save 20% on the course?</strong> Enter your email and we'll send you the discount code!</p>
+          <p><strong>Want to save 80% on the course?</strong> Enter your email and we'll send you the discount code!</p>
         </div>
         <div class="col-sm-6">
           <form action="index.html" class="" method="post">

@@ -3,7 +3,7 @@
 get_header();
 
 
-get_template_part('template-parts/banner', 'title');
+get_template_part('template-parts/banner', 'hero');
 
 ?>
 

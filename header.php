@@ -67,7 +67,8 @@
                 'depth' => 3, // As set up in our CSS
                 'container' => 'nav', // HTML wrapper in the menu ul
                 'container_class' => 'main-menu', // Wrapper class
-                'menu_class' => 'top-menu d-flex flex-row mavigation top-menu justify-content-end list-unstyled'
+                'menu_class' => 'top-menu d-flex flex-row navigation top-menu justify-content-end list-unstyled',
+                'fallback_cb' => false
               )
             );
           ?>

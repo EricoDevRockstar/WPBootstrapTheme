@@ -12,16 +12,22 @@ get_template_part('template-parts/banner', 'hero');
       <div class="row">
         <div class="col-md-8 offset-md-2 overflow-hidden">
 
-          <article class="post">
-            <div class="meta">
-              <span>Sep 24, 2021</span>
-            </div>
-            <h2><a href="#">Blog post title</a></h2>
-            <p class="excerpt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores veritatis expedita molestias id, dolorem sapiente quae dolores modi hic et ea, suscipit minima eligendi magnam odio reiciendis dolorum, non placeat?
-            </p>
-            <a href="#" class="read-more">Read the full post -&gt;</a>
-          </article>
+          <?php
+
+            if ( have_posts() ) {
+
+              while( have_posts() ) {
+
+                the_post();
+                get_template_part( 'template-parts/content', 'excerpt');
+
+              }
+
+            } else {
+              get_template_part( 'template-parts/content', 'none');
+            }
+
+          ?>
 
         </div>
       </div>

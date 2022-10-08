@@ -1,19 +1,20 @@
 <?php
 /**
- * Standard Excerpt Template
+ * Standard Excerpt (Blog) Template
  * 
  * @package WPBootstrapTheme
  * @since 2.1.0
  * 
  */
 ?>
-        <article class="post">
-            <div class="meta">
-              <span>Sep 24, 2022</span>
-            </div>
-            <h2><a href="#">Blog post title</a></h2>
-            <p class="excerpt">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores veritatis expedita molestias id, dolorem sapiente quae dolores modi hic et ea, suscipit minima eligendi magnam odio reiciendis dolorum, non placeat?
-            </p>
-            <a href="#" class="read-more">Read the full post -&gt;</a>
+
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+          <div class="meta">
+            <span><?php echo get_the_date( 'M d, Y' ); ?></span>
+          </div>
+          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+          <p class="excerpt">
+            <?php force_balance_tags( the_excerpt() ); ?>
+          </p>
+          <a href="<?php the_permalink(); ?>" class="read-more"><?php esc_html_e( 'Read the full post ->', 'WPBootstrapTheme' ); ?></a>
         </article>

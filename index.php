@@ -1,9 +1,18 @@
 <?php
+/** 
+ * The Main Template file
+ * 
+ * This is the most general template file in the WordPress Theme Hierarchy and is one of the two files required for a theme to work. The other file required is style.css 
+ * 
+ * @link https//developer.wordpress.org/theme/basics/template-hierarchy/
+ * 
+ * @package WPBootstrapTheme
+ * @since 2.1.0
+*/
 
-get_header();
+  get_header();
 
-
-get_template_part('template-parts/banner', 'hero');
+  get_template_part('template-parts/banner', 'hero');
 
 ?>
 

@@ -1,3 +1,14 @@
+<?php
+/**
+ * Standard Footer File
+ * 
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * 
+ * @package WPBootstrapTheme
+ * @since 2.1.0
+ * 
+ */
+?>
 <footer>
     <div class="footer-calltoaction text-center">
       <div class="container">

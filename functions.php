@@ -91,5 +91,19 @@ function WPBootstrapTheme_readmore( $more ) {
 add_filter( 'excerpt_more', 'WPBootstrapTheme_readmore');
 
 function WPBootstrapTheme_pagination() {
-    
-}
+
+    global $wp_query;
+    $links = paginate_links(
+      array(
+        'current'   => max( 1, get_query_var( 'paged') ),
+        'total'     => $wp_query -> max_num_pages,
+        'type'      => 'list',
+        'prev_text' => '<-',
+        'next_text' =>  '->'
+      )
+    );
+    $links = '<nav class="WPBootstrapTheme-pagination">' . $links;
+    $links .= '</nav>';
+    echo wp_kses_post( $links );
+  
+  }

@@ -89,3 +89,7 @@ function WPBootstrapTheme_readmore( $more ) {
 }
 
 add_filter( 'excerpt_more', 'WPBootstrapTheme_readmore');
+
+function WPBootstrapTheme_pagination() {
+    
+}

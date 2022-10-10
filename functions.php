@@ -83,3 +83,9 @@ function WPBootstrapTheme_assets() {
 
 add_action( 'wp_enqueue_scripts', 'WPBootstrapTheme_assets' );
 
+/* Custom Readmore Text */
+function WPBootstrapTheme_readmore( $more ) {
+    return '...';
+}
+
+add_filter( 'excerpt_more', 'WPBootstrapTheme_readmore');

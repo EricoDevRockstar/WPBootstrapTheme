@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="copyright text-center">
-      <p>&copy; Copyright Datio Specio Inc.</p>
+      <p>&copy; Copyright Datio Specio Ltd.</p>
     </div>
   </footer>
 

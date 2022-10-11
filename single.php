@@ -25,6 +25,14 @@
         if ( have_posts() ) {
         while( have_posts() ) {
             the_post();
+            if ( has_post_thumbnail() ) {
+                the_post_thumbnail(
+                    'large',
+                    array(
+                        'class' => 'image-fluid'
+                    )
+            );
+            }
     ?>
 
     <div class="col-md-8 offset-md-2 overflow-hidden">
@@ -32,10 +40,8 @@
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <?php
-            // Output the thumbnail and the post content
-            if ( has_post_thumbnail() ) {
-                the_post_thumbnail('full');
-            }
+            // Output the post content
+            
                 the_content();
         ?>
 

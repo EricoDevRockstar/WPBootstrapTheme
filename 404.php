@@ -1,8 +1,8 @@
 <?php
 /** 
- * The Single Page Template file
+ * The 404 Page Template file
  * 
- * This is the file powering the single page in our website e.g about us page, our services page, portfolio page etc.
+ * This is the file is displayed when the page or content is not found.
  * 
  * @package WPBootstrapTheme
  * @since 2.1.0

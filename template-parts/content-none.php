@@ -44,4 +44,3 @@ if ( is_home() && current_user_can( 'publish_posts' ) ) {
  <?php
    get_search_form();
  }
- ?>

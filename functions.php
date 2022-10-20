@@ -107,3 +107,7 @@ function WPBootstrapTheme_pagination() {
     echo wp_kses_post( $links );
   
   }
+
+  /* Add Customizer Functionality */
+
+  require get_template_directory() . '/includes/customizer-WPBoostrapTheme.php';

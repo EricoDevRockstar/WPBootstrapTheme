@@ -109,5 +109,4 @@ function WPBootstrapTheme_pagination() {
   }
 
   /* Add Customizer Functionality */
-
-  require get_template_directory() . '/includes/customizer-WPBoostrapTheme.php';
+require get_template_directory() . '/includes/customizer-WPBootstrapTheme.php';

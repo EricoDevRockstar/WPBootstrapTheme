@@ -35,6 +35,19 @@ new \Kirki\Field\Textarea(
 	]
 );
 
+new \Kirki\Field\Code(
+	[
+		'settings'    => 'subscribe_form',
+		'label'       => esc_html__( 'Your Subscribe HTML Form', 'WPBootstrapTheme' ),
+		'description' => esc_html__( 'Put your subscribe HTML code form here', 'WPBootstrapTheme' ),
+		'section'     => 'WP_Bootstrap_Theme_section',
+		'default'     => '',
+		'choices'     => [
+			'language' => 'HTML',
+		],
+	]
+);
+
 
 /*
 

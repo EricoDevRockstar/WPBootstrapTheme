@@ -48,6 +48,16 @@ new \Kirki\Field\Code(
 	]
 );
 
+// Section For Footer
+new \Kirki\Section(
+	'WP_Bootstrap_Theme_section',
+	[
+		'title'       => esc_html__( 'Here is the Subscribe bar', 'WPBootstrapTheme' ),
+		'description' => esc_html__( 'My Subscribe section bar content here.', 'WPBootstrapTheme' ),
+		'panel'       => 'WP_Bootstrap_Theme_panel',
+		'priority'    => 160,
+	]
+);
 
 /*
 
@@ -65,7 +75,6 @@ new \Kirki\Panel(
 		'description' => esc_html__( 'Use this to customize the Bootstrap Theme', 'WPBootstrapTheme' ),
 	]
 );
-
 
 // Section - Subscribe Bar
 new \Kirki\Section(

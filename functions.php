@@ -59,6 +59,9 @@ Enqueue scripts and styles
 function WPBootstrapTheme_assets() {
 
     // Enqueue CSS Files
+    wp_enqueue_style( 'google-font-Raleway', '//fonts.googleapis.com/css?family=Raleway:400,600,700', array(), 1.1, 'all' );
+    wp_enqueue_style( 'google-font-Montserrat', '//fonts.googleapis.com/css?family=Montserrat:400,700', array(), 1.2, 'all' );
+
     wp_enqueue_style( 'google-font', '//fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap', array(), 1.0, 'all' );
 
     wp_enqueue_style( 'bootstrap', get_theme_file_uri('assets/css/bootstrap.min.css'), array(), 'v5.1.1', 'all' );
@@ -110,3 +113,44 @@ function WPBootstrapTheme_pagination() {
 
   /* Add Customizer Functionality */
 require get_template_directory() . '/includes/customizer-WPBootstrapTheme.php';
+
+
+// Create A Custom Post Type
+function types_of_homes() {
+
+    $beautifulHomes = array(
+
+        'labels' => array(
+            'name' => 'Homes',
+            'singular_name' => 'Home'
+        ),
+
+        'hierarchical' => true,
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-admin-multisite',
+        'supports' => array('title', 'editor', 'thumbnail')
+    );
+
+    register_post_type('homes', $beautifulHomes);
+}
+
+add_action('init', 'types_of_homes');
+
+
+function homes_taxonomy() {
+
+    $homesLabels = array(
+        'labels' => array(
+            'name' => 'Brands',
+            'singular_name' => 'Brand',
+        ),
+
+        'public' => true,
+        'hierarchical' => true,
+    );
+
+    register_taxonomy('brans', array('homes'), $homesLabels);
+}
+
+add_action('init', 'homes_taxonomy');

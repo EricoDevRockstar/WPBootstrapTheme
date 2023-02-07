@@ -11,10 +11,10 @@
  ?>
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html <?php language_attributes(); ?> dir="ltr">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="<?php bloginfo('charset'); ?>">
   <title>Bootstrap to WordPress 2.0</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
